@@ -1108,6 +1108,7 @@ function retrieveMediaFileDetails ($MediaFile,$absoluteURL,$filenameWithoutExten
 	
 	require_once($absoluteURL."components/getid3/getid3.php"); //Lib to read ID3 tags in media files
 	$getID3 = new getID3; //initialize getID3 engine
+	$getID3->setOption(array('encoding' => 'UTF-8')); // fix for encoding problems with eye3D generated tags
 	
 	$ThisFileSizeInMB = round(filesize($MediaFile)/1048576,2);
 	$ThisFileInfo = $getID3->analyze($MediaFile); //read file tags
