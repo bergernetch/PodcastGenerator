@@ -30,3 +30,4 @@ A fully-functional live demo of Podcast generator is available at:
 http://podcastgenerator.net/demo
 
 
+bergernetch: Added a small patch to enforce utf-8 when parsing the id3 tags.
